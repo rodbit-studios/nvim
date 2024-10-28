@@ -9,7 +9,7 @@ return {
 				disabled_filetypes = {
 					"NvimTree",
 				},
-				theme = "eldritch",
+				-- theme = "eldritch",
 			},
 			sections = {
 				lualine_a = { "mode" },

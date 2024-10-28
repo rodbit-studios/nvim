@@ -46,6 +46,8 @@ keymap.set("n", "<C-l>", ":wincmd l<CR>", opts) -- Go to left split
 -------------------------------------- TEXT MANIPULATION ------------------------------------------
 keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", { desc = "Toggle line wrap" })
 
+keymap.set("n", "<leader>nh", "<cmd>noh<CR>") -- Clear highlights
+
 keymap.set("n", "U", "<C-r>") -- Press 'U' for redo
 
 keymap.set("v", "<", "<gv", opts) -- Indent left
