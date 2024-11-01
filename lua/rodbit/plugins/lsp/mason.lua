@@ -26,13 +26,16 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
-				"vtsls",
-				"html",
+				"angularls",
 				"cssls",
-				"tailwindcss",
-				"lua_ls",
-				"graphql",
 				"emmet_ls",
+				"graphql",
+				"html",
+				"jsonls",
+				"lua_ls",
+				"tailwindcss",
+				"vtsls",
+				"yamlls",
 			},
 		})
 		mason_tool_installer.setup({
