@@ -96,7 +96,7 @@ return {
 				-- configure emmet language server
 				lspconfig["emmet_ls"].setup({
 					capabilities = capabilities,
-					filetypes = { "typescriptreact", "javascriptreact" },
+					filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less" },
 				})
 			end,
 			["lua_ls"] = function()
@@ -114,36 +114,6 @@ return {
 							},
 						},
 					},
-				})
-			end,
-			["html"] = function()
-				lspconfig["html"].setup({
-					capabilities = capabilities,
-					filetypes = { "html" },
-				})
-			end,
-			["cssls"] = function()
-				lspconfig["cssls"].setup({
-					capabilities = capabilities,
-					filetypes = { "css", "sass", "scss", "less" },
-				})
-			end,
-			["bashls"] = function()
-				lspconfig["bashls"].setup({
-					capabilities = capabilities,
-					filetypes = { "bash" },
-				})
-			end,
-			["marksman"] = function()
-				lspconfig["marksman"].setup({
-					capabilities = capabilities,
-					filetypes = { "markdown" },
-				})
-			end,
-			["angularls"] = function()
-				lspconfig["angularls"].setup({
-					capabilities = capabilities,
-					filetypes = { "typescriptreact", "javascriptreact" },
 				})
 			end,
 		})
