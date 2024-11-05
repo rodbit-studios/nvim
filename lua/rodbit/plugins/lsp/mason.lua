@@ -33,6 +33,8 @@ return {
 				"lua_ls",
 				"graphql",
 				"emmet_ls",
+				"bashls",
+				"marksman",
 			},
 		})
 		mason_tool_installer.setup({
