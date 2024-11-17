@@ -1,12 +1,18 @@
-vim.cmd("let g:netrw_liststyle = 3")
-
+-- Globals
 local opt = vim.opt
 
+vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
+
+-- Trailing Whitespace
+vim.opt.fillchars:append({ eob = " " }) -- remove the ~ from end of buffer
+
+-- Line Numbers
 opt.relativenumber = true
 opt.number = true
+vim.o.list = true
 
 -- Disable showing the mode below the statusline
-opt.showmode = false
+opt.showmode = true
 
 -- Tabs and Indentation
 opt.tabstop = 2
@@ -16,6 +22,7 @@ opt.autoindent = true
 opt.smartindent = true
 opt.breakindent = true
 
+-- Line Wrapping
 opt.wrap = false
 opt.scrolloff = 8
 opt.cmdheight = 0
@@ -24,9 +31,6 @@ opt.cmdheight = 0
 opt.ignorecase = true
 opt.smartcase = true
 opt.inccommand = "split"
-
-opt.termguicolors = true
-opt.signcolumn = "yes"
 
 -- Backspace
 opt.backspace = "indent,eol,start"
@@ -40,3 +44,21 @@ opt.splitbelow = true
 
 -- Enable cursor line highlight
 opt.cursorline = true
+
+-- Appearance
+opt.termguicolors = true
+opt.signcolumn = "yes"
+
+-- Mouse
+opt.mouse = "a"
+
+-- Backup and Swap Files
+opt.backup = false
+opt.writebackup = false
+opt.swapfile = false
+
+-- Persistent Undo
+opt.undofile = true
+
+-- netrw
+vim.cmd("let g:netrw_liststyle = 3")
