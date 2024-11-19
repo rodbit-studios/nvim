@@ -1,10 +1,9 @@
 return {
-	{
-		"rodbit-studios/rodbit-theme.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			vim.cmd("colorscheme rodbit-theme")
-		end,
-	},
+	"folke/tokyonight.nvim",
+	lazy = false,
+	priority = 1000,
+	opts = {},
+	config = function()
+		vim.cmd([[colorscheme tokyonight-moon]])
+	end,
 }

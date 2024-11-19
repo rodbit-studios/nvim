@@ -12,6 +12,24 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "rodbit.plugins" }, { import = "rodbit.plugins.lsp" } }, {
+	performance = {
+		rtp = {
+			-- disable some default Neovim plugins that slow down startup
+			disabled_plugins = {
+				"gzip",
+				"matchit",
+				"matchparen",
+				"netrwPlugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
+		cache = {
+			enabled = true,
+		},
+	},
 	checker = {
 		enable = true,
 		notify = false,

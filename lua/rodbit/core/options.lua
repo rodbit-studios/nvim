@@ -1,6 +1,10 @@
 -- Globals
 local opt = vim.opt
 
+-- Fix markdown indentation settings
+vim.g.markdown_recommended_style = 0
+
+-- Performance
 vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
 
 -- Trailing Whitespace
