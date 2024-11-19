@@ -4,6 +4,11 @@ return {
 	priority = 1000,
 	opts = {},
 	config = function()
-		vim.cmd([[colorscheme tokyonight-moon]])
+		require("tokyonight").setup({
+			on_colors = function(colors)
+				colors.comment = "#5c6370"
+			end,
+		})
+		vim.cmd("colorscheme tokyonight-moon")
 	end,
 }

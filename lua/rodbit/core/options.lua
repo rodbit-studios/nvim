@@ -1,11 +1,12 @@
 -- Globals
 local opt = vim.opt
 
+-- Performance
+vim.loader.enable()
+vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
+
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
-
--- Performance
-vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
 
 -- Trailing Whitespace
 vim.opt.fillchars:append({ eob = " " }) -- remove the ~ from end of buffer
