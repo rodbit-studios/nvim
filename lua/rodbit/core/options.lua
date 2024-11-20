@@ -1,15 +1,22 @@
 -- Globals
 local opt = vim.opt
 
+vim.opt.list = true
+vim.opt.listchars = {
+	space = " ", -- or use "." for a simple dot
+	trail = "⋅", -- show trailing spaces
+	tab = "  ", -- hide tabs
+}
+
 -- Performance
 vim.loader.enable()
-vim.opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
+opt.redrawtime = 10000 -- Allow more time for loading syntax on large files
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
 -- Trailing Whitespace
-vim.opt.fillchars:append({ eob = " " }) -- remove the ~ from end of buffer
+opt.fillchars:append({ eob = " " }) -- remove the ~ from end of buffer
 
 -- Line Numbers
 opt.relativenumber = true
@@ -17,7 +24,7 @@ opt.number = true
 vim.o.list = true
 
 -- Disable showing the mode below the statusline
-opt.showmode = true
+opt.showmode = false
 
 -- Tabs and Indentation
 opt.tabstop = 2
@@ -64,6 +71,3 @@ opt.swapfile = false
 
 -- Persistent Undo
 opt.undofile = true
-
--- netrw
-vim.cmd("let g:netrw_liststyle = 3")

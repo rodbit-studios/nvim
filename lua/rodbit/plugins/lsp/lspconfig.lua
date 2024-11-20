@@ -83,6 +83,12 @@ return {
 			function(server_name)
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
+					handlers = {
+						["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+							virtual_text = false,
+							update_in_insert = false,
+						}),
+					},
 				})
 			end,
 			["graphql"] = function()
